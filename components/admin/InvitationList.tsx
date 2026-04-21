@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Invitation } from '@/lib/types'
+import { DeleteButton } from './DeleteButton'
 
 const THEME_LABELS: Record<string, string> = {
   elegant: 'Elegant Gold',
@@ -53,6 +54,7 @@ export function InvitationList({ invitations }: Props) {
               <td className="admin-actions">
                 <Link href={`/admin/${inv.id}/edit`} className="admin-btn-small">Edit</Link>
                 <Link href={`/admin/${inv.id}/rsvp`} className="admin-btn-small">RSVP</Link>
+                <DeleteButton id={inv.id} />
               </td>
             </tr>
           ))}

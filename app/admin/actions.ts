@@ -113,3 +113,9 @@ export async function updateInvitation(id: string, formData: FormData) {
   revalidatePath(`/admin/${id}/edit`)
   redirect('/admin')
 }
+
+export async function deleteInvitation(id: string) {
+  const supabase = await createClient()
+  await supabase.from('invitations').delete().eq('id', id)
+  revalidatePath('/admin')
+}
