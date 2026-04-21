@@ -1,0 +1,77 @@
+#event {
+  background: var(--navy-deep);
+  position: relative;
+}
+
+#event::before,
+#event::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-color: var(--gold-subtle);
+  border-style: solid;
+}
+#event::before { top: 2rem; left: 2rem; border-width: 1px 0 0 1px; }
+#event::after  { bottom: 2rem; right: 2rem; border-width: 0 1px 1px 0; }
+
+.event-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 700px;
+  width: 100%;
+}
+
+.event-card {
+  border: 1px solid var(--gold-dim);
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.event-icon { font-size: 1.8rem; }
+
+.event-type {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+}
+
+.event-title {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--gold);
+}
+
+.event-detail {
+  font-size: 0.8rem;
+  color: var(--white-dim);
+  line-height: 2;
+}
+
+.event-cal-btn {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--gold-dim);
+  background: none;
+  color: var(--gold);
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background var(--transition);
+  display: inline-block;
+}
+
+.event-cal-btn:hover { background: var(--gold-subtle); }
+
+@media (max-width: 600px) {
+  .event-grid { grid-template-columns: 1fr; }
+}

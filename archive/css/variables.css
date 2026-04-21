@@ -1,0 +1,16 @@
+:root {
+  --navy-deep:   #0d0d1f;
+  --navy-mid:    #1a1a2e;
+  --navy-light:  #0f3460;
+  --gold:        #c9a84c;
+  --gold-dim:    rgba(201, 168, 76, 0.5);
+  --gold-subtle: rgba(201, 168, 76, 0.15);
+  --white:       rgba(255, 255, 255, 0.85);
+  --white-dim:   rgba(255, 255, 255, 0.4);
+
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Montserrat', Arial, sans-serif;
+
+  --section-pad: clamp(2rem, 5vw, 5rem);
+  --transition:  0.4s ease;
+}
