@@ -12,6 +12,8 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html { scroll-behavior: smooth; }
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -204,3 +206,66 @@ body {
 .stat-number.stat-green { color: #16a34a; }
 .stat-label { font-size: 0.8rem; color: #6b7280; margin-top: 0.25rem; }
 .admin-page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+
+/* ===== LANDING ===== */
+.landing-nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 3rem; border-bottom: 1px solid #f3f4f6; position: sticky; top: 0; background: #fff; z-index: 10; }
+.landing-nav-brand { font-size: 1rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #111827; text-decoration: none; }
+.landing-nav-cta { background: #111827; color: #fff; padding: 0.5rem 1.25rem; border-radius: 4px; font-size: 0.8rem; letter-spacing: 1px; text-decoration: none; transition: background 0.2s; }
+.landing-nav-cta:hover { background: #374151; }
+
+.landing-hero { min-height: 92vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 4rem 2rem; position: relative; }
+.landing-hero-label { font-size: 0.62rem; letter-spacing: 6px; text-transform: uppercase; color: #9ca3af; margin-bottom: 1.5rem; }
+.landing-hero-title { font-size: clamp(2.5rem, 7vw, 5.5rem); font-weight: 200; letter-spacing: 0.06em; color: #111827; line-height: 1.1; }
+.landing-hero-title strong { font-weight: 700; }
+.landing-hero-divider { width: 3rem; height: 2px; background: #111827; margin: 2rem auto; }
+.landing-hero-sub { font-size: 1rem; color: #6b7280; max-width: 440px; line-height: 1.7; margin-bottom: 2.5rem; }
+.landing-hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.landing-btn-primary { background: #111827; color: #fff; padding: 0.875rem 2rem; border-radius: 4px; font-size: 0.85rem; letter-spacing: 1px; text-decoration: none; transition: background 0.2s; }
+.landing-btn-primary:hover { background: #374151; }
+.landing-btn-outline { border: 1px solid #d1d5db; color: #374151; padding: 0.875rem 2rem; border-radius: 4px; font-size: 0.85rem; letter-spacing: 1px; text-decoration: none; transition: border-color 0.2s; }
+.landing-btn-outline:hover { border-color: #9ca3af; }
+.landing-hero-proof { margin-top: 1.5rem; font-size: 0.75rem; color: #9ca3af; letter-spacing: 0.5px; }
+.landing-hero-scroll { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); font-size: 0.62rem; letter-spacing: 3px; text-transform: uppercase; color: #9ca3af; }
+
+.landing-section { padding: 6rem 3rem; }
+.landing-section-gray { background: #f9fafb; }
+.landing-section-dark { background: #111827; }
+.landing-section-label { font-size: 0.6rem; letter-spacing: 5px; text-transform: uppercase; color: #9ca3af; text-align: center; margin-bottom: 0.75rem; }
+.landing-section-title { font-size: 2rem; font-weight: 300; letter-spacing: 0.04em; text-align: center; color: #111827; margin-bottom: 0.75rem; }
+.landing-section-dark .landing-section-title { color: #fff; }
+.landing-section-sub { text-align: center; color: #6b7280; font-size: 0.9rem; max-width: 500px; margin: 0 auto 3.5rem; line-height: 1.7; }
+.landing-section-dark .landing-section-sub { color: #9ca3af; }
+
+.landing-theme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto; }
+.landing-theme-card { border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; }
+.landing-theme-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
+.landing-theme-preview { height: 180px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 1.5rem; }
+.landing-theme-preview-elegant { background: linear-gradient(135deg, #0f1923 0%, #1a2d40 100%); }
+.landing-theme-preview-floral { background: linear-gradient(135deg, #fdf6f0 0%, #fce8d8 100%); }
+.landing-theme-preview-minimal { background: #ffffff; border-bottom: 1px solid #f3f4f6; }
+.landing-theme-name { padding: 1rem; border-top: 1px solid #f3f4f6; }
+.landing-theme-name h3 { font-size: 0.9rem; font-weight: 600; color: #111827; }
+.landing-theme-name p { font-size: 0.75rem; color: #9ca3af; margin-top: 3px; }
+.landing-theme-tag { font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase; padding: 2px 8px; border-radius: 2px; }
+
+.landing-features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2.5rem; max-width: 900px; margin: 0 auto; }
+.landing-feature { text-align: center; }
+.landing-feature-icon { font-size: 1.75rem; margin-bottom: 1rem; }
+.landing-feature-title { font-size: 0.95rem; font-weight: 600; color: #111827; margin-bottom: 0.4rem; }
+.landing-feature-desc { font-size: 0.82rem; color: #6b7280; line-height: 1.6; }
+
+.landing-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; max-width: 800px; margin: 0 auto; position: relative; }
+.landing-steps::before { content: ''; position: absolute; top: 27px; left: 18%; right: 18%; height: 1px; background: #e5e7eb; }
+.landing-step { text-align: center; }
+.landing-step-num { width: 56px; height: 56px; border-radius: 50%; border: 1px solid #111827; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; font-size: 1rem; font-weight: 300; color: #111827; background: #fff; position: relative; z-index: 1; }
+.landing-step-title { font-size: 0.9rem; font-weight: 600; color: #111827; margin-bottom: 0.35rem; }
+.landing-step-desc { font-size: 0.8rem; color: #6b7280; line-height: 1.6; }
+
+.landing-cta-label { font-size: 0.6rem; letter-spacing: 5px; text-transform: uppercase; color: #4b5563; margin-bottom: 1rem; text-align: center; }
+.landing-cta-title { font-size: 2.5rem; font-weight: 300; color: #fff; letter-spacing: 0.04em; text-align: center; margin-bottom: 0.75rem; }
+.landing-cta-sub { color: #9ca3af; font-size: 0.9rem; max-width: 420px; margin: 0 auto 2.5rem; line-height: 1.7; text-align: center; }
+.landing-btn-wa { background: #25d366; color: #fff; padding: 1rem 2.5rem; border-radius: 4px; font-size: 0.9rem; letter-spacing: 0.5px; text-decoration: none; font-weight: 600; display: inline-block; transition: background 0.2s; }
+.landing-btn-wa:hover { background: #1ebe5a; }
+
+.landing-footer { border-top: 1px solid #1f2937; background: #111827; text-align: center; padding: 1.5rem 3rem; }
+.landing-footer p { font-size: 0.75rem; color: #4b5563; }

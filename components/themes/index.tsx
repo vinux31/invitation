@@ -18,3 +18,8 @@ const THEMES: Record<ThemeId, ComponentType<ThemeProps>> = {
 export function resolveTheme(themeId: ThemeId): ComponentType<ThemeProps> {
   return THEMES[themeId] ?? ElegantTheme
 }
+
+export function ThemeRenderer({ invitation, guestBookEntries }: ThemeProps) {
+  const Component = THEMES[invitation.theme] ?? ElegantTheme
+  return <Component invitation={invitation} guestBookEntries={guestBookEntries} />
+}

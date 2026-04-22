@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
-import { resolveTheme } from '@/components/themes'
+import { ThemeRenderer } from '@/components/themes'
 import type { Invitation, GuestBookEntry } from '@/lib/types'
 
 interface Props {
@@ -45,7 +45,6 @@ export default async function InvitationPage({ params }: Props) {
   if (!invitation) notFound()
 
   const guestBookEntries = await getGuestBookEntries(invitation.id)
-  const ThemeComponent = resolveTheme(invitation.theme)
 
-  return <ThemeComponent invitation={invitation} guestBookEntries={guestBookEntries} />
+  return <ThemeRenderer invitation={invitation} guestBookEntries={guestBookEntries} />
 }
